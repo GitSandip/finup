@@ -1,0 +1,206 @@
+/* Apply a full-screen static background */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: url('graph_chart_with_moving_up_arrow_stock_market_financial_investment_diagram_on_blue_background.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Keeps background static while scrolling */
+    background-size: cover; /* Ensure background covers full screen */
+    color: white;
+    margin: 0;
+    position: relative; /* Make sure footer stays outside */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed; /* Fixed position for navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Brand (FinUp) with interactive font and hover effect */
+/* .brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #db5d14;
+    transition: left 0.3s ease;
+} */
+
+/* Brand (FinUp) with interactive font and hover effect */
+.brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    transition: left 0.3s ease;
+}
+
+.fin {
+    color: #db5d14; /* Orange color for 'Fin' */
+    font-style: italic;
+}
+
+.up {
+    color: #28a745; /* Green color for 'Up' */
+    font-style: italic;
+}
+
+.brand:hover .fin {
+    color: #e4580d; /* Darker orange on hover for 'Fin' */
+}
+
+.brand:hover .up {
+    color: #218838; /* Darker green on hover for 'Up' */
+}
+
+
+.brand:hover {
+    color: #e4580d;
+}
+
+/* Main container with glassmorphic effect */
+.container {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-top: 120px; /* Increased to make room for navbar */
+    height: 500px;
+}
+
+/* Improved input styling */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Styled button */
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Footer - Fixed at bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    background: rgba(21, 20, 20, 0.6); /* Semi-transparent background for footer */
+    z-index: 999; /* Ensure it stays on top */
+}
+
+/* Footer brand with hover effect */
+.footer-brand {
+    font-weight: bold;
+    color: #db5d14;
+    transition: color 0.3s ease;
+}
+
+.footer-brand:hover {
+    color: #e4580d;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .brand {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 100vw;
+        padding: 10px;
+        margin-top: 40px; /* Adjusted to make space for navbar */
+        height: 100vh;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
+
+/* Smaller mobile screen adjustments */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .brand {
+        font-size: 22px;
+    }
+
+    .container {
+        width: 100vw;
+        margin-top: 0px; /* Adjusted for smaller screens */
+        height: 100vh;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+}

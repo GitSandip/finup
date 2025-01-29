@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinUp - SIP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="Gemini_Generated_Image_rntc9rntc9rntc9r-removebg.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <span class="fin">Fin</span><span class="up">Up</span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>SIP Calculator</h2>
+        <input type="number" id="investment" placeholder="Monthly Investment (₹)">
+        <input type="number" id="rate" placeholder="Annual Interest Rate (%)">
+        <input type="number" id="duration" placeholder="Duration (Years)">
+        <button onclick="calculateSIP()">Calculate</button>
+        <p><strong>Total Investment:</strong> ₹<span id="totalInvested">0</span></p>
+        <p><strong>Maturity Value:</strong> ₹<span id="maturityValue">0</span></p>
+        <p><strong>Total Gains:</strong> ₹<span id="totalGains">0</span></p>
+        <canvas id="sipChart"></canvas>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>Copyright &copy; 2025 <span class="fin">Fin</span><span class="up">Up</span> - All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
